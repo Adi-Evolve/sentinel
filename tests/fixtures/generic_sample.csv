@@ -1,0 +1,3 @@
+timestamp,source_ip,event_type,user,status_code,endpoint,bytes_sent,message
+2026-04-13T10:00:12Z,192.0.2.15,login_success,ajay.kumar,200,/login,640,Accepted login
+2026-04-13T10:05:44Z,192.0.2.90,,guest,403,/login,128,Failed password for guest

@@ -1,0 +1,1312 @@
+{
+  "scan_id": "d523d0a0-ac93-4c83-ab6b-dd562c4afc09",
+  "scan_timestamp": "2026-04-17T03:56:19.119832+00:00",
+  "filename": "tenk.log",
+  "detected_format": "auth",
+  "total_lines": 10000,
+  "parse_errors": 0,
+  "total_events": 10000,
+  "unique_ips": 1,
+  "anomalies": [
+    {
+      "rank": 1,
+      "composite_score": 96.0,
+      "severity_label": "CRITICAL",
+      "source_ip": "185.220.101.47",
+      "country_code": "NL",
+      "window_start": "2026-04-13T01:00:00+00:00",
+      "window_end": "2026-04-13T01:05:00+00:00",
+      "rule_triggered": "brute_force",
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "iso_score": 0.0839,
+      "spike_score": 0.0,
+      "rule_score": 0.88,
+      "is_known_bad_ip": true,
+      "login_failure_count": 300,
+      "login_success_count": 0,
+      "requests_per_minute": 60.0,
+      "unique_endpoints": 0,
+      "user": "root",
+      "briefing": "IP 185.220.101.47 made 300 failed login attempts over 5 minutes (60.0/min), consistent with automated password spraying or an SSH dictionary attack. No successful login was recorded in this window. Recommended action: block IP 185.220.101.47 at the firewall immediately and audit all recent successful logins for the affected account.",
+      "briefing_source": "rule-based",
+      "metadata": {
+        "ml_explanation": {
+          "anomaly_probability": 0.083906,
+          "feature_contributions": [
+            {
+              "feature": "hour_of_day <= 1.00",
+              "weight": -0.001182
+            },
+            {
+              "feature": "total_events <= 300.00",
+              "weight": 0.0
+            },
+            {
+              "feature": "login_failure_count <= 300.00",
+              "weight": 0.0
+            },
+            {
+              "feature": "login_success_count <= 0.00",
+              "weight": 0.0
+            },
+            {
+              "feature": "failure_success_ratio <= 100.00",
+              "weight": 0.0
+            },
+            {
+              "feature": "requests_per_minute <= 60.00",
+              "weight": 0.0
+            }
+          ],
+          "human_readable": "Isolation Forest flagged this event as anomalous (probability 0.08) based on a combined deviation across multiple behavioral features.",
+          "method": "lime_tabular"
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "composite_score": 96.0,
+      "severity_label": "CRITICAL",
+      "source_ip": "185.220.101.47",
+      "country_code": "NL",
+      "window_start": "2026-04-13T01:05:00+00:00",
+      "window_end": "2026-04-13T01:10:00+00:00",
+      "rule_triggered": "brute_force",
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "iso_score": 0.0839,
+      "spike_score": 0.0,
+      "rule_score": 0.88,
+      "is_known_bad_ip": true,
+      "login_failure_count": 300,
+      "login_success_count": 0,
+      "requests_per_minute": 60.0,
+      "unique_endpoints": 0,
+      "user": "root",
+      "briefing": "IP 185.220.101.47 made 300 failed login attempts over 5 minutes (60.0/min), consistent with automated password spraying or an SSH dictionary attack. No successful login was recorded in this window. Recommended action: block IP 185.220.101.47 at the firewall immediately and audit all recent successful logins for the affected account.",
+      "briefing_source": "rule-based",
+      "metadata": {}
+    },
+    {
+      "rank": 3,
+      "composite_score": 96.0,
+      "severity_label": "CRITICAL",
+      "source_ip": "185.220.101.47",
+      "country_code": "NL",
+      "window_start": "2026-04-13T01:10:00+00:00",
+      "window_end": "2026-04-13T01:15:00+00:00",
+      "rule_triggered": "brute_force",
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "iso_score": 0.0839,
+      "spike_score": 0.0,
+      "rule_score": 0.88,
+      "is_known_bad_ip": true,
+      "login_failure_count": 300,
+      "login_success_count": 0,
+      "requests_per_minute": 60.0,
+      "unique_endpoints": 0,
+      "user": "root",
+      "briefing": "IP 185.220.101.47 made 300 failed login attempts over 5 minutes (60.0/min), consistent with automated password spraying or an SSH dictionary attack. No successful login was recorded in this window. Recommended action: block IP 185.220.101.47 at the firewall immediately and audit all recent successful logins for the affected account.",
+      "briefing_source": "rule-based",
+      "metadata": {}
+    },
+    {
+      "rank": 4,
+      "composite_score": 96.0,
+      "severity_label": "CRITICAL",
+      "source_ip": "185.220.101.47",
+      "country_code": "NL",
+      "window_start": "2026-04-13T01:15:00+00:00",
+      "window_end": "2026-04-13T01:20:00+00:00",
+      "rule_triggered": "brute_force",
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "iso_score": 0.0839,
+      "spike_score": 0.0,
+      "rule_score": 0.88,
+      "is_known_bad_ip": true,
+      "login_failure_count": 300,
+      "login_success_count": 0,
+      "requests_per_minute": 60.0,
+      "unique_endpoints": 0,
+      "user": "root",
+      "briefing": "IP 185.220.101.47 made 300 failed login attempts over 5 minutes (60.0/min), consistent with automated password spraying or an SSH dictionary attack. No successful login was recorded in this window. Recommended action: block IP 185.220.101.47 at the firewall immediately and audit all recent successful logins for the affected account.",
+      "briefing_source": "rule-based",
+      "metadata": {}
+    },
+    {
+      "rank": 5,
+      "composite_score": 96.0,
+      "severity_label": "CRITICAL",
+      "source_ip": "185.220.101.47",
+      "country_code": "NL",
+      "window_start": "2026-04-13T01:20:00+00:00",
+      "window_end": "2026-04-13T01:25:00+00:00",
+      "rule_triggered": "brute_force",
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "iso_score": 0.0839,
+      "spike_score": 0.0,
+      "rule_score": 0.88,
+      "is_known_bad_ip": true,
+      "login_failure_count": 300,
+      "login_success_count": 0,
+      "requests_per_minute": 60.0,
+      "unique_endpoints": 0,
+      "user": "root",
+      "briefing": "IP 185.220.101.47 made 300 failed login attempts over 5 minutes (60.0/min), consistent with automated password spraying or an SSH dictionary attack. No successful login was recorded in this window. Recommended action: block IP 185.220.101.47 at the firewall immediately and audit all recent successful logins for the affected account.",
+      "briefing_source": "rule-based",
+      "metadata": {}
+    }
+  ],
+  "briefing_sources": {
+    "rule-based": 5,
+    "fallback": 0
+  },
+  "processing_time_seconds": 3.192,
+  "time_range": {
+    "start": "2026-04-13T01:00:00+00:00",
+    "end": "2026-04-13T03:46:39+00:00"
+  },
+  "event_type_counts": {
+    "login_failed": 10000
+  },
+  "events_preview": [
+    {
+      "timestamp": "2026-04-13T01:00:00+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 01:00:00 server sshd[1234]: Failed password for root from 185.220.101.47 port 30000 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T01:00:01+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 01:00:01 server sshd[1234]: Failed password for root from 185.220.101.47 port 30001 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T01:00:02+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 01:00:02 server sshd[1234]: Failed password for root from 185.220.101.47 port 30002 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T01:00:03+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 01:00:03 server sshd[1234]: Failed password for root from 185.220.101.47 port 30003 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T01:00:04+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 01:00:04 server sshd[1234]: Failed password for root from 185.220.101.47 port 30004 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T01:00:05+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 01:00:05 server sshd[1234]: Failed password for root from 185.220.101.47 port 30005 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T01:00:06+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 01:00:06 server sshd[1234]: Failed password for root from 185.220.101.47 port 30006 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T01:00:07+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 01:00:07 server sshd[1234]: Failed password for root from 185.220.101.47 port 30007 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T01:00:08+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 01:00:08 server sshd[1234]: Failed password for root from 185.220.101.47 port 30008 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T01:00:09+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 01:00:09 server sshd[1234]: Failed password for root from 185.220.101.47 port 30009 ssh2",
+      "parse_error": false
+    }
+  ],
+  "feature_row_count": 34,
+  "detection_breakdown": {
+    "rule_count": 5,
+    "ml_count": 0,
+    "spike_count": 0
+  },
+  "feature_preview": [
+    {
+      "source_ip": "185.220.101.47",
+      "window_start": "2026-04-13T01:00:00+00:00",
+      "total_events": 300,
+      "login_failure_count": 300,
+      "login_success_count": 0,
+      "failure_success_ratio": 100.0,
+      "requests_per_minute": 60.0,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 1,
+      "is_night_hour": true,
+      "country_code": "NL",
+      "is_known_bad_ip": true,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": false,
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "rule_triggered": "brute_force",
+      "rule_score": 0.88,
+      "rule_flagged": true,
+      "iso_score_raw": 0.01855643075724217,
+      "iso_score": 0.08390555121065629,
+      "iso_flagged": false,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    },
+    {
+      "source_ip": "185.220.101.47",
+      "window_start": "2026-04-13T01:05:00+00:00",
+      "total_events": 300,
+      "login_failure_count": 300,
+      "login_success_count": 0,
+      "failure_success_ratio": 100.0,
+      "requests_per_minute": 60.0,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 1,
+      "is_night_hour": true,
+      "country_code": "NL",
+      "is_known_bad_ip": true,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": false,
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "rule_triggered": "brute_force",
+      "rule_score": 0.88,
+      "rule_flagged": true,
+      "iso_score_raw": 0.01855643075724217,
+      "iso_score": 0.08390555121065629,
+      "iso_flagged": false,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    },
+    {
+      "source_ip": "185.220.101.47",
+      "window_start": "2026-04-13T01:10:00+00:00",
+      "total_events": 300,
+      "login_failure_count": 300,
+      "login_success_count": 0,
+      "failure_success_ratio": 100.0,
+      "requests_per_minute": 60.0,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 1,
+      "is_night_hour": true,
+      "country_code": "NL",
+      "is_known_bad_ip": true,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": false,
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "rule_triggered": "brute_force",
+      "rule_score": 0.88,
+      "rule_flagged": true,
+      "iso_score_raw": 0.01855643075724217,
+      "iso_score": 0.08390555121065629,
+      "iso_flagged": false,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    },
+    {
+      "source_ip": "185.220.101.47",
+      "window_start": "2026-04-13T01:15:00+00:00",
+      "total_events": 300,
+      "login_failure_count": 300,
+      "login_success_count": 0,
+      "failure_success_ratio": 100.0,
+      "requests_per_minute": 60.0,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 1,
+      "is_night_hour": true,
+      "country_code": "NL",
+      "is_known_bad_ip": true,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": false,
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "rule_triggered": "brute_force",
+      "rule_score": 0.88,
+      "rule_flagged": true,
+      "iso_score_raw": 0.01855643075724217,
+      "iso_score": 0.08390555121065629,
+      "iso_flagged": false,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    },
+    {
+      "source_ip": "185.220.101.47",
+      "window_start": "2026-04-13T01:20:00+00:00",
+      "total_events": 300,
+      "login_failure_count": 300,
+      "login_success_count": 0,
+      "failure_success_ratio": 100.0,
+      "requests_per_minute": 60.0,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 1,
+      "is_night_hour": true,
+      "country_code": "NL",
+      "is_known_bad_ip": true,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": false,
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "rule_triggered": "brute_force",
+      "rule_score": 0.88,
+      "rule_flagged": true,
+      "iso_score_raw": 0.01855643075724217,
+      "iso_score": 0.08390555121065629,
+      "iso_flagged": false,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    }
+  ],
+  "timeline": {
+    "series": [
+      {
+        "timestamp": "2026-04-13T01:00:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:01:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:02:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:03:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:04:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:05:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:06:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:07:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:08:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:09:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:10:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:11:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:12:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:13:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:14:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:15:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:16:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:17:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:18:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:19:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:20:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:21:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:22:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:23:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:24:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-13T01:25:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:26:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:27:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:28:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:29:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:30:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:31:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:32:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:33:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:34:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:35:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:36:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:37:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:38:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:39:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:40:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:41:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:42:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:43:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:44:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:45:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:46:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:47:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:48:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:49:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:50:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:51:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:52:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:53:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:54:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:55:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:56:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:57:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:58:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T01:59:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:00:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:01:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:02:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:03:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:04:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:05:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:06:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:07:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:08:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:09:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:10:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:11:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:12:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:13:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:14:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:15:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:16:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:17:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:18:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:19:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:20:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:21:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:22:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:23:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:24:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:25:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:26:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:27:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:28:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:29:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:30:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:31:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:32:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:33:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:34:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:35:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:36:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:37:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:38:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:39:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:40:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:41:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:42:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:43:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:44:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:45:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:46:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:47:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:48:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:49:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:50:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:51:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:52:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:53:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:54:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:55:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:56:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:57:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:58:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T02:59:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:00:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:01:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:02:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:03:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:04:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:05:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:06:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:07:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:08:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:09:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:10:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:11:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:12:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:13:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:14:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:15:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:16:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:17:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:18:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:19:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:20:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:21:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:22:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:23:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:24:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:25:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:26:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:27:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:28:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:29:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:30:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:31:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:32:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:33:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:34:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:35:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:36:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:37:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:38:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:39:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:40:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:41:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:42:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:43:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:44:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:45:00+00:00",
+        "event_count": 60,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-13T03:46:00+00:00",
+        "event_count": 40,
+        "is_anomaly_window": false
+      }
+    ],
+    "anomaly_windows": [
+      "2026-04-13T01:00:00+00:00",
+      "2026-04-13T01:05:00+00:00",
+      "2026-04-13T01:10:00+00:00",
+      "2026-04-13T01:15:00+00:00",
+      "2026-04-13T01:20:00+00:00"
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+%PDF-1.4
+1 0 obj << /Type /Catalog /Pages 2 0 R >> endobj
+2 0 obj << /Type /Pages /Kids [3 0 R] /Count 1 >> endobj
+3 0 obj << /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >> endobj
+4 0 obj << /Length 2892 >> stream
+BT
+/F1 12 Tf
+50 790 Td
+(Security Scan Report) Tj
+T*
+(Scan ID: 38c410fa-f589-4119-8ebb-60354a1601a9) Tj
+T*
+(Filename: brute_force.log) Tj
+T*
+(Detected format: auth) Tj
+T*
+(Total events: 8000) Tj
+T*
+(Unique IPs: 9) Tj
+T*
+(Anomalies: 5) Tj
+T*
+(#1 CRITICAL 185.220.101.47 score 100.0) Tj
+T*
+(IP 185.220.101.47 recorded 47 failed authentication attempts followed by 1) Tj
+T*
+(successful login\(s\) in the same 5-minute window, a pattern strongly consistent) Tj
+T*
+(with automated credential stuffing using stolen credentials. This IP is flagged) Tj
+T*
+(as a known Tor exit node or cloud VPS range commonly used for automated attacks.) Tj
+T*
+(Recommended action: immediately reset credentials for root, force-terminate) Tj
+T*
+(active sessions, and block IP 185.220.101.47.) Tj
+T*
+(#2 CRITICAL 13.127.221.19 score 98.0) Tj
+T*
+(Account nginx authenticated from India at 00:02 and then from United States at) Tj
+T*
+(00:04, just 2 minutes apart, which is consistent with impossible travel. The) Tj
+T*
+(estimated travel distance is approximately 13577 km. This is a strong indicator) Tj
+T*
+(of credential compromise, session hijacking, or VPN/proxy-assisted access.) Tj
+T*
+(Recommended action: force-terminate all active sessions for nginx, reset the) Tj
+T*
+(password immediately, and notify the account owner.) Tj
+T*
+(#3 CRITICAL 172.67.181.44 score 98.0) Tj
+T*
+(Account ops authenticated from United States at 00:04 and then from India at) Tj
+T*
+(00:04, just 0 minutes apart, which is consistent with impossible travel. The) Tj
+T*
+(estimated travel distance is approximately 13577 km. This is a strong indicator) Tj
+T*
+(of credential compromise, session hijacking, or VPN/proxy-assisted access.) Tj
+T*
+(Recommended action: force-terminate all active sessions for ops, reset the) Tj
+T*
+(password immediately, and notify the account owner.) Tj
+T*
+(#4 CRITICAL 18.139.22.71 score 98.0) Tj
+T*
+(Account deploy authenticated from India at 15:21 and then from Singapore at) Tj
+T*
+(15:26, just 5 minutes apart, which is consistent with impossible travel. The) Tj
+T*
+(estimated travel distance is approximately 3444 km. This is a strong indicator) Tj
+T*
+(of credential compromise, session hijacking, or VPN/proxy-assisted access.) Tj
+T*
+(Recommended action: force-terminate all active sessions for deploy, reset the) Tj
+T*
+(password immediately, and notify the account owner.) Tj
+T*
+(#5 CRITICAL 34.93.210.45 score 98.0) Tj
+T*
+(Account ops authenticated from India at 00:01 and then from United States at) Tj
+T*
+(00:05, just 4 minutes apart, which is consistent with impossible travel. The) Tj
+T*
+(estimated travel distance is approximately 13577 km. This is a strong indicator) Tj
+T*
+(of credential compromise, session hijacking, or VPN/proxy-assisted access.) Tj
+T*
+(Recommended action: force-terminate all active sessions for ops, reset the) Tj
+T*
+(password immediately, and notify the account owner.) Tj
+ET
+endstream endobj
+5 0 obj << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >> endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000003185 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+3255
+%%EOF

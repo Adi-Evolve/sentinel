@@ -1,0 +1,211 @@
+{
+  "scan_id": "04c2dc0c-11a0-4a6c-8ff5-45895e698109",
+  "scan_timestamp": "2026-04-14T13:11:53.441315+00:00",
+  "filename": "timeline.log",
+  "detected_format": "auth",
+  "total_lines": 15,
+  "parse_errors": 0,
+  "total_events": 15,
+  "unique_ips": 1,
+  "anomalies": [
+    {
+      "rank": 1,
+      "composite_score": 96.0,
+      "severity_label": "CRITICAL",
+      "source_ip": "185.220.101.47",
+      "country_code": "NL",
+      "window_start": "2026-04-13T02:30:00+00:00",
+      "window_end": "2026-04-13T02:35:00+00:00",
+      "rule_triggered": "brute_force",
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "iso_score": 0.0,
+      "spike_score": 0.0,
+      "rule_score": 0.88,
+      "is_known_bad_ip": true,
+      "login_failure_count": 15,
+      "login_success_count": 0,
+      "requests_per_minute": 3.0,
+      "unique_endpoints": 0,
+      "user": "root",
+      "briefing": "IP 185.220.101.47 made 15 failed login attempts over 5 minutes (3.0/min), consistent with automated password spraying or an SSH dictionary attack. No successful login was recorded in this window. Recommended action: block IP 185.220.101.47 at the firewall immediately and audit all recent successful logins for the affected account.",
+      "briefing_source": "rule-based",
+      "metadata": {}
+    }
+  ],
+  "briefing_sources": {
+    "rule-based": 1,
+    "local-llm": 0,
+    "claude-api": 0,
+    "fallback": 0
+  },
+  "processing_time_seconds": 0.055,
+  "time_range": {
+    "start": "2026-04-13T02:31:00+00:00",
+    "end": "2026-04-13T02:31:14+00:00"
+  },
+  "event_type_counts": {
+    "login_failed": 15
+  },
+  "events_preview": [
+    {
+      "timestamp": "2026-04-13T02:31:00+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 02:31:00 server sshd[1234]: Failed password for root from 185.220.101.47 port 48122 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T02:31:01+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 02:31:01 server sshd[1234]: Failed password for root from 185.220.101.47 port 48123 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T02:31:02+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 02:31:02 server sshd[1234]: Failed password for root from 185.220.101.47 port 48124 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T02:31:03+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 02:31:03 server sshd[1234]: Failed password for root from 185.220.101.47 port 48125 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T02:31:04+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 02:31:04 server sshd[1234]: Failed password for root from 185.220.101.47 port 48126 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T02:31:05+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 02:31:05 server sshd[1234]: Failed password for root from 185.220.101.47 port 48127 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T02:31:06+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 02:31:06 server sshd[1234]: Failed password for root from 185.220.101.47 port 48128 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T02:31:07+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 02:31:07 server sshd[1234]: Failed password for root from 185.220.101.47 port 48129 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T02:31:08+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 02:31:08 server sshd[1234]: Failed password for root from 185.220.101.47 port 48130 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-13T02:31:09+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 13 02:31:09 server sshd[1234]: Failed password for root from 185.220.101.47 port 48131 ssh2",
+      "parse_error": false
+    }
+  ],
+  "feature_row_count": 1,
+  "feature_preview": [
+    {
+      "source_ip": "185.220.101.47",
+      "window_start": "2026-04-13T02:30:00+00:00",
+      "total_events": 15,
+      "login_failure_count": 15,
+      "login_success_count": 0,
+      "failure_success_ratio": 15.0,
+      "requests_per_minute": 3.0,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 2,
+      "is_night_hour": true,
+      "country_code": "NL",
+      "is_known_bad_ip": true,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": false,
+      "all_rules_fired": [
+        "brute_force"
+      ],
+      "rule_triggered": "brute_force",
+      "rule_score": 0.88,
+      "rule_flagged": true,
+      "iso_score_raw": 0.0,
+      "iso_score": 0.0,
+      "iso_flagged": false,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    }
+  ],
+  "timeline": {
+    "series": [
+      {
+        "timestamp": "2026-04-13T02:31:00+00:00",
+        "event_count": 15,
+        "is_anomaly_window": true
+      }
+    ],
+    "anomaly_windows": [
+      "2026-04-13T02:30:00+00:00"
+    ]
+  }
+}

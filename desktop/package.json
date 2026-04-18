@@ -1,0 +1,16 @@
+{
+  "name": "log-sentinel-desktop",
+  "version": "1.0.0",
+  "description": "Log Sentinel Desktop Application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron": "^29.1.5"
+  }
+}

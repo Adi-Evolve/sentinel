@@ -1,0 +1,144 @@
+{
+  "scan_id": "d534802c-054e-49c7-bbea-01e1a0f0e1c0",
+  "scan_timestamp": "2026-04-17T07:36:41.135657+00:00",
+  "filename": "mixed_threats_demo.log",
+  "detected_format": "generic",
+  "total_lines": 163,
+  "parse_errors": 163,
+  "total_events": 0,
+  "unique_ips": 0,
+  "anomalies": [],
+  "briefing_sources": {
+    "rule-based": 0,
+    "fallback": 0
+  },
+  "processing_time_seconds": 0.082,
+  "time_range": {
+    "start": null,
+    "end": null
+  },
+  "event_type_counts": {},
+  "events_preview": [
+    {
+      "timestamp": "2026-04-17T07:36:41.109814+00:00",
+      "source_ip": "0.0.0.0",
+      "event_type": "unknown",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "# Log-Sentinel Demo File: Mixed Threat Scenarios",
+      "parse_error": true
+    },
+    {
+      "timestamp": "2026-04-17T07:36:41.109855+00:00",
+      "source_ip": "0.0.0.0",
+      "event_type": "unknown",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "# This file contains diverse attack patterns and legitimate traffic for comprehensive testing",
+      "parse_error": true
+    },
+    {
+      "timestamp": "2026-04-17T07:36:41.109873+00:00",
+      "source_ip": "0.0.0.0",
+      "event_type": "unknown",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "# Generated: April 17, 2026",
+      "parse_error": true
+    },
+    {
+      "timestamp": "2026-04-17T07:36:41.109883+00:00",
+      "source_ip": "0.0.0.0",
+      "event_type": "unknown",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "# Scenarios included: Normal traffic, Brute force, Impossible travel, Known bad IPs, Rate anomalies",
+      "parse_error": true
+    },
+    {
+      "timestamp": "2026-04-17T07:36:41.109894+00:00",
+      "source_ip": "0.0.0.0",
+      "event_type": "unknown",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "# =====================================================",
+      "parse_error": true
+    },
+    {
+      "timestamp": "2026-04-17T07:36:41.109930+00:00",
+      "source_ip": "0.0.0.0",
+      "event_type": "unknown",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "# SECTION 1: NORMAL LEGITIMATE TRAFFIC (Baseline)",
+      "parse_error": true
+    },
+    {
+      "timestamp": "2026-04-17T07:36:41.109947+00:00",
+      "source_ip": "0.0.0.0",
+      "event_type": "unknown",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "# =====================================================",
+      "parse_error": true
+    },
+    {
+      "timestamp": "2026-04-17T07:36:41.109963+00:00",
+      "source_ip": "0.0.0.0",
+      "event_type": "unknown",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "192.168.1.100 - - [17/Apr/2026:08:15:23 +0530] \"GET /index.html HTTP/1.1\" 200 4821 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36\"",
+      "parse_error": true
+    },
+    {
+      "timestamp": "2026-04-17T07:36:41.109973+00:00",
+      "source_ip": "0.0.0.0",
+      "event_type": "unknown",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "192.168.1.100 - admin [17/Apr/2026:08:15:45 +0530] \"GET /dashboard HTTP/1.1\" 200 3420 \"https://company.in/login\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64)\"",
+      "parse_error": true
+    },
+    {
+      "timestamp": "2026-04-17T07:36:41.109983+00:00",
+      "source_ip": "0.0.0.0",
+      "event_type": "unknown",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "10.0.0.50 - john.doe [17/Apr/2026:08:16:12 +0530] \"POST /api/data/query HTTP/1.1\" 200 1523 \"https://company.in/app\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)\"",
+      "parse_error": true
+    }
+  ],
+  "feature_row_count": 0,
+  "detection_breakdown": {
+    "rule_count": 0,
+    "ml_count": 0,
+    "spike_count": 0
+  },
+  "feature_preview": [],
+  "timeline": {
+    "series": [],
+    "anomaly_windows": []
+  }
+}

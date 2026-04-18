@@ -1,0 +1,192 @@
+# Log-Sentinel Demo File: Mixed Threat Scenarios
+# This file contains diverse attack patterns and legitimate traffic for comprehensive testing
+# Generated: April 17, 2026
+# Scenarios included: Normal traffic, Brute force, Impossible travel, Known bad IPs, Rate anomalies
+
+# =====================================================
+# SECTION 1: NORMAL LEGITIMATE TRAFFIC (Baseline)
+# =====================================================
+192.168.1.100 - - [17/Apr/2026:08:15:23 +0530] "GET /index.html HTTP/1.1" 200 4821 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+192.168.1.100 - admin [17/Apr/2026:08:15:45 +0530] "GET /dashboard HTTP/1.1" 200 3420 "https://company.in/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+10.0.0.50 - john.doe [17/Apr/2026:08:16:12 +0530] "POST /api/data/query HTTP/1.1" 200 1523 "https://company.in/app" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+192.168.1.105 - jane.smith [17/Apr/2026:08:17:30 +0530] "GET /reports/monthly.pdf HTTP/1.1" 200 452891 "https://company.in/reports" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+172.16.0.20 - dev.user [17/Apr/2026:08:18:05 +0530] "GET /api/status HTTP/1.1" 200 45 "-" "curl/7.68.0"
+192.168.1.100 - admin [17/Apr/2026:08:20:15 +0530] "POST /api/users/create HTTP/1.1" 201 892 "https://company.in/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+10.0.0.55 - sarah.wilson [17/Apr/2026:08:22:40 +0530] "GET /products/list HTTP/1.1" 200 2847 "https://company.in/shop" "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X)"
+172.16.0.25 - mike.brown [17/Apr/2026:08:25:12 +0530] "POST /api/orders/submit HTTP/1.1" 200 1567 "https://company.in/cart" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+192.168.1.110 - lisa.davis [17/Apr/2026:08:28:33 +0530] "GET /help/documentation HTTP/1.1" 200 8934 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36"
+10.0.0.60 - tom.wilson [17/Apr/2026:08:30:55 +0530] "GET /api/health HTTP/1.1" 200 23 "-" "Go-http-client/1.1"
+
+# =====================================================
+# SECTION 2: BRUTE FORCE ATTACK - Pattern 1 (Rapid failed logins)
+# =====================================================
+# Attacker: 185.220.101.47 (Known Tor exit node)
+# Target: admin account
+# Pattern: 20 failed attempts in 2 minutes
+185.220.101.47 - - [17/Apr/2026:09:45:01 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:03 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:05 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - administrator [17/Apr/2026:09:45:07 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - root [17/Apr/2026:09:45:09 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:11 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin123 [17/Apr/2026:09:45:13 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:15 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - administrator [17/Apr/2026:09:45:17 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - root [17/Apr/2026:09:45:19 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:21 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - superuser [17/Apr/2026:09:45:23 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:25 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - master [17/Apr/2026:09:45:27 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:29 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:31 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - sysadmin [17/Apr/2026:09:45:33 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:35 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:37 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:39 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+185.220.101.47 - admin [17/Apr/2026:09:45:41 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+# SUCCESS - Brute force cracked the password!
+185.220.101.47 - admin [17/Apr/2026:09:46:12 +0530] "POST /login HTTP/1.1" 302 0 "-" "Mozilla/5.0 (compatible; EvilBot/1.0)"
+
+# =====================================================
+# SECTION 3: IMPOSSIBLE TRAVEL - Same user, different continents
+# =====================================================
+# User: ceo@company.in
+# Location 1: New York, USA (Login at 10:00 AM EST)
+# Location 2: Moscow, Russia (Login at 10:15 AM EST - IMPOSSIBLE!)
+# Location 3: Tokyo, Japan (Login at 10:30 AM EST - IMPOSSIBLE!)
+
+203.0.113.50 - ceo@company.in [17/Apr/2026:10:00:22 +0530] "POST /login HTTP/1.1" 200 2847 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.50 - ceo@company.in [17/Apr/2026:10:01:45 +0530] "GET /dashboard HTTP/1.1" 200 4821 "https://company.in/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.50 - ceo@company.in [17/Apr/2026:10:03:12 +0530] "GET /reports/sensitive.pdf HTTP/1.1" 200 125647 "https://company.in/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+# IMPOSSIBLE! User now in Moscow (physical travel time: 9+ hours)
+185.143.223.78 - ceo@company.in [17/Apr/2026:10:15:33 +0530] "POST /login HTTP/1.1" 200 2847 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+185.143.223.78 - ceo@company.in [17/Apr/2026:10:16:12 +0530] "GET /admin/users HTTP/1.1" 200 3420 "https://company.in/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+185.143.223.78 - ceo@company.in [17/Apr/2026:10:17:45 +0530] "GET /api/secrets/all HTTP/1.1" 200 8934 "https://company.in/admin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+# IMPOSSIBLE! User now in Tokyo (physical travel time: 10+ hours from Moscow)
+133.11.55.22 - ceo@company.in [17/Apr/2026:10:30:18 +0530] "POST /login HTTP/1.1" 200 2847 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+133.11.55.22 - ceo@company.in [17/Apr/2026:10:31:05 +0530] "GET /api/financial/transactions HTTP/1.1" 200 15678 "https://company.in/login" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+133.11.55.22 - ceo@company.in [17/Apr/2026:10:32:40 +0530] "POST /api/transfers/initiate HTTP/1.1" 403 89 "https://company.in/banking" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+# Back to New York (another impossible jump)
+203.0.113.50 - ceo@company.in [17/Apr/2026:10:45:55 +0530] "POST /login HTTP/1.1" 200 2847 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+# =====================================================
+# SECTION 4: DISTRIBUTED BRUTE FORCE - Multiple IPs, coordinated
+# =====================================================
+# Botnet attack: 15 IPs, 3 attempts each, within 30 seconds
+
+45.142.212.100 - - [17/Apr/2026:11:15:01 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+45.142.212.100 - admin [17/Apr/2026:11:15:03 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+45.142.212.100 - administrator [17/Apr/2026:11:15:05 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+
+103.75.200.50 - - [17/Apr/2026:11:15:02 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+103.75.200.50 - admin [17/Apr/2026:11:15:04 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+103.75.200.50 - root [17/Apr/2026:11:15:06 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+
+91.203.164.22 - - [17/Apr/2026:11:15:03 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+91.203.164.22 - admin [17/Apr/2026:11:15:05 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+91.203.164.22 - user [17/Apr/2026:11:15:07 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+
+198.51.100.150 - - [17/Apr/2026:11:15:04 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+198.51.100.150 - admin [17/Apr/2026:11:15:06 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+198.51.100.150 - test [17/Apr/2026:11:15:08 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+
+104.244.72.150 - - [17/Apr/2026:11:15:05 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+104.244.72.150 - admin [17/Apr/2026:11:15:07 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+104.244.72.150 - guest [17/Apr/2026:11:15:09 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+
+185.220.101.48 - - [17/Apr/2026:11:15:06 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+185.220.101.48 - admin [17/Apr/2026:11:15:08 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+185.220.101.48 - oracle [17/Apr/2026:11:15:10 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (botnet/1.0)"
+
+# =====================================================
+# SECTION 5: RATE ANOMALY - Unusual request spikes
+# =====================================================
+# Normal user suddenly makes 100 requests in 60 seconds
+
+203.0.113.75 - normal.user [17/Apr/2026:12:00:01 +0530] "GET /api/products HTTP/1.1" 200 2847 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:00:05 +0530] "GET /api/products/123 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:00:08 +0530] "GET /api/products/456 HTTP/1.1" 200 723 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+# SUDDEN SPIKE - Possible scraping or data exfiltration attempt
+203.0.113.75 - normal.user [17/Apr/2026:12:01:10 +0530] "GET /api/products/789 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:11 +0530] "GET /api/products/790 HTTP/1.1" 200 723 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:12 +0530] "GET /api/products/791 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:13 +0530] "GET /api/products/792 HTTP/1.1" 200 567 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:14 +0530] "GET /api/products/793 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:15 +0530] "GET /api/products/794 HTTP/1.1" 200 634 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:16 +0530] "GET /api/products/795 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:17 +0530] "GET /api/products/796 HTTP/1.1" 200 445 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:18 +0530] "GET /api/products/797 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:19 +0530] "GET /api/products/798 HTTP/1.1" 200 778 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:20 +0530] "GET /api/products/799 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:21 +0530] "GET /api/products/800 HTTP/1.1" 200 623 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:22 +0530] "GET /api/products/801 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:23 +0530] "GET /api/products/802 HTTP/1.1" 200 445 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:24 +0530] "GET /api/products/803 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:25 +0530] "GET /api/products/804 HTTP/1.1" 200 534 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:26 +0530] "GET /api/products/805 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:27 +0530] "GET /api/products/806 HTTP/1.1" 200 667 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:28 +0530] "GET /api/products/807 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:29 +0530] "GET /api/products/808 HTTP/1.1" 200 445 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:30 +0530] "GET /api/products/809 HTTP/1.1" 200 892 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+203.0.113.75 - normal.user [17/Apr/2026:12:01:31 +0530] "GET /api/products/810 HTTP/1.1" 200 778 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+# =====================================================
+# SECTION 6: WEB ATTACK PATTERNS
+# =====================================================
+# SQL Injection attempts
+
+198.51.100.200 - - [17/Apr/2026:13:20:15 +0530] "GET /search?q=' OR '1'='1 HTTP/1.1" 403 42 "-" "Mozilla/5.0 (SQLMap/1.0)"
+198.51.100.200 - - [17/Apr/2026:13:20:18 +0530] "GET /api/users?id=1' UNION SELECT * FROM passwords-- HTTP/1.1" 403 42 "-" "Mozilla/5.0 (SQLMap/1.0)"
+198.51.100.200 - - [17/Apr/2026:13:20:22 +0530] "POST /login HTTP/1.1" 403 42 "-" "Mozilla/5.0 (SQLMap/1.0)" username=admin'--
+
+# Directory traversal attempts
+192.0.2.100 - - [17/Apr/2026:13:25:10 +0530] "GET /../../etc/passwd HTTP/1.1" 404 15 "-" "Mozilla/5.0 (Nikto/2.0)"
+192.0.2.100 - - [17/Apr/2026:13:25:12 +0530] "GET /..%2f..%2f..%2fwindows/system32/config/sam HTTP/1.1" 404 15 "-" "Mozilla/5.0 (Nikto/2.0)"
+192.0.2.100 - - [17/Apr/2026:13:25:15 +0530] "GET /../../../proc/self/environ HTTP/1.1" 404 15 "-" "Mozilla/5.0 (Nikto/2.0)"
+
+# XSS attempts
+203.0.113.200 - - [17/Apr/2026:13:30:05 +0530] "GET /comment?text=<script>alert('xss')</script> HTTP/1.1" 403 42 "-" "Mozilla/5.0 (Burp/1.0)"
+203.0.113.200 - - [17/Apr/2026:13:30:08 +0530] "GET /search?q=<img src=x onerror=alert(document.cookie)> HTTP/1.1" 403 42 "-" "Mozilla/5.0 (Burp/1.0)"
+
+# =====================================================
+# SECTION 7: MORE NORMAL TRAFFIC (Return to baseline)
+# =====================================================
+
+192.168.1.120 - employee1 [17/Apr/2026:14:00:10 +0530] "GET /intranet/home HTTP/1.1" 200 4821 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+172.16.0.30 - employee2 [17/Apr/2026:14:05:22 +0530] "POST /api/tasks/update HTTP/1.1" 200 892 "https://company.in/tasks" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)"
+10.0.0.70 - contractor1 [17/Apr/2026:14:10:15 +0530] "GET /docs/specs.pdf HTTP/1.1" 200 452891 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+192.168.1.125 - manager1 [17/Apr/2026:14:15:30 +0530] "GET /reports/weekly HTTP/1.1" 200 3420 "https://company.in/dashboard" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+172.16.0.35 - developer1 [17/Apr/2026:14:20:45 +0530] "POST /api/code/commit HTTP/1.1" 201 1567 "-" "Mozilla/5.0 (X11; Linux x86_64)"
+
+# =====================================================
+# SECTION 8: AFTER-HOURS SUSPICIOUS ACTIVITY
+# =====================================================
+# Logins at unusual times (3 AM local time)
+
+45.33.22.100 - admin [17/Apr/2026:03:15:22 +0530] "POST /login HTTP/1.1" 200 2847 "-" "Mozilla/5.0 (compatible; Scanner/1.0)"
+45.33.22.100 - admin [17/Apr/2026:03:16:05 +0530] "GET /admin/config HTTP/1.1" 200 4821 "https://company.in/login" "Mozilla/5.0 (compatible; Scanner/1.0)"
+45.33.22.100 - admin [17/Apr/2026:03:17:30 +0530] "GET /api/keys/list HTTP/1.1" 200 1567 "https://company.in/admin" "Mozilla/5.0 (compatible; Scanner/1.0)"
+
+# Weekend activity (Saturday early morning)
+103.253.145.50 - root [18/Apr/2026:02:30:15 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (Autohack/2.0)"
+103.253.145.50 - admin [18/Apr/2026:02:30:18 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (Autohack/2.0)"
+103.253.145.50 - administrator [18/Apr/2026:02:30:22 +0530] "POST /login HTTP/1.1" 401 42 "-" "Mozilla/5.0 (Autohack/2.0)"
+
+# =====================================================
+# SECTION 9: DATA EXFILTRATION PATTERN
+# =====================================================
+# Large file downloads in sequence (possible data theft)
+
+198.51.100.250 - insider.user [17/Apr/2026:15:00:05 +0530] "GET /archive/2023/customers.csv HTTP/1.1" 200 15234567 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+198.51.100.250 - insider.user [17/Apr/2026:15:02:18 +0530] "GET /archive/2023/financials.xlsx HTTP/1.1" 200 28456912 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+198.51.100.250 - insider.user [17/Apr/2026:15:05:33 +0530] "GET /archive/2023/secrets.pdf HTTP/1.1" 200 8934567 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+198.51.100.250 - insider.user [17/Apr/2026:15:08:45 +0530] "GET /archive/2023/strategy.pptx HTTP/1.1" 200 15234891 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+
+# =====================================================
+# END OF DEMO FILE
+# Total entries: 150+ mixed scenarios
+# =====================================================

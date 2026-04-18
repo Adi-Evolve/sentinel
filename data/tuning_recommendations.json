@@ -1,0 +1,128 @@
+{
+  "best_candidate": {
+    "name": "baseline",
+    "score": 100.0,
+    "values": {
+      "BRUTE_FORCE_THRESHOLD": 10,
+      "BRUTE_FORCE_WINDOW": 5,
+      "STUFFING_FAIL_THRESHOLD": 5,
+      "IF_CONTAMINATION": 0.05,
+      "IF_THRESHOLD": 0.6,
+      "MIN_SCORE_TO_INCLUDE": 10.0,
+      "KNOWN_BAD_IP_BONUS": 8.0
+    },
+    "notes": {
+      "summary": {
+        "brute_top_rule": "credential_stuffing",
+        "brute_top_score": 100.0,
+        "travel_top_rule": "impossible_travel",
+        "travel_top_user": "ajay.kumar",
+        "noisy_anomaly_count": 5,
+        "noisy_critical_count": 0
+      }
+    }
+  },
+  "leaderboard": [
+    {
+      "name": "baseline",
+      "score": 100.0,
+      "values": {
+        "BRUTE_FORCE_THRESHOLD": 10,
+        "BRUTE_FORCE_WINDOW": 5,
+        "STUFFING_FAIL_THRESHOLD": 5,
+        "IF_CONTAMINATION": 0.05,
+        "IF_THRESHOLD": 0.6,
+        "MIN_SCORE_TO_INCLUDE": 10.0,
+        "KNOWN_BAD_IP_BONUS": 8.0
+      },
+      "notes": {
+        "summary": {
+          "brute_top_rule": "credential_stuffing",
+          "brute_top_score": 100.0,
+          "travel_top_rule": "impossible_travel",
+          "travel_top_user": "ajay.kumar",
+          "noisy_anomaly_count": 5,
+          "noisy_critical_count": 0
+        }
+      }
+    },
+    {
+      "name": "strict-noisy",
+      "score": 100.0,
+      "values": {
+        "BRUTE_FORCE_THRESHOLD": 10,
+        "BRUTE_FORCE_WINDOW": 5,
+        "STUFFING_FAIL_THRESHOLD": 5,
+        "IF_CONTAMINATION": 0.03,
+        "IF_THRESHOLD": 0.65,
+        "MIN_SCORE_TO_INCLUDE": 15.0,
+        "KNOWN_BAD_IP_BONUS": 6.0
+      },
+      "notes": {
+        "summary": {
+          "brute_top_rule": "credential_stuffing",
+          "brute_top_score": 100.0,
+          "travel_top_rule": "impossible_travel",
+          "travel_top_user": "ajay.kumar",
+          "noisy_anomaly_count": 5,
+          "noisy_critical_count": 0
+        }
+      }
+    },
+    {
+      "name": "balanced-prod",
+      "score": 100.0,
+      "values": {
+        "BRUTE_FORCE_THRESHOLD": 10,
+        "BRUTE_FORCE_WINDOW": 5,
+        "STUFFING_FAIL_THRESHOLD": 6,
+        "IF_CONTAMINATION": 0.04,
+        "IF_THRESHOLD": 0.62,
+        "MIN_SCORE_TO_INCLUDE": 12.0,
+        "KNOWN_BAD_IP_BONUS": 7.0
+      },
+      "notes": {
+        "summary": {
+          "brute_top_rule": "credential_stuffing",
+          "brute_top_score": 100.0,
+          "travel_top_rule": "impossible_travel",
+          "travel_top_user": "ajay.kumar",
+          "noisy_anomaly_count": 5,
+          "noisy_critical_count": 0
+        }
+      }
+    },
+    {
+      "name": "high-sensitivity",
+      "score": 100.0,
+      "values": {
+        "BRUTE_FORCE_THRESHOLD": 10,
+        "BRUTE_FORCE_WINDOW": 5,
+        "STUFFING_FAIL_THRESHOLD": 5,
+        "IF_CONTAMINATION": 0.08,
+        "IF_THRESHOLD": 0.55,
+        "MIN_SCORE_TO_INCLUDE": 8.0,
+        "KNOWN_BAD_IP_BONUS": 8.0
+      },
+      "notes": {
+        "summary": {
+          "brute_top_rule": "credential_stuffing",
+          "brute_top_score": 100.0,
+          "travel_top_rule": "impossible_travel",
+          "travel_top_user": "ajay.kumar",
+          "noisy_anomaly_count": 5,
+          "noisy_critical_count": 0
+        }
+      }
+    }
+  ],
+  "env_recommendation": {
+    "BRUTE_FORCE_THRESHOLD": 10,
+    "BRUTE_FORCE_WINDOW": 5,
+    "STUFFING_FAIL_THRESHOLD": 5,
+    "IF_CONTAMINATION": 0.05,
+    "IF_THRESHOLD": 0.6,
+    "MIN_SCORE_TO_INCLUDE": 10.0,
+    "KNOWN_BAD_IP_BONUS": 8.0
+  }
+}

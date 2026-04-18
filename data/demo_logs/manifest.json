@@ -1,0 +1,12 @@
+{
+  "brute_force.log": {
+    "lines": 8000,
+    "size_bytes": 754400,
+    "profile": "standard"
+  },
+  "impossible_travel.log": {
+    "lines": 8000,
+    "size_bytes": 750694,
+    "profile": "standard"
+  }
+}

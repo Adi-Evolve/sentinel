@@ -1,0 +1,63 @@
+{
+  "timestamp": "2026-04-17T04:32:13Z",
+  "strict_docker": false,
+  "strict_briefing": true,
+  "checks": [
+    {
+      "name": "Unit tests",
+      "ok": true,
+      "required": true,
+      "duration_seconds": 187.425,
+      "command": "C:\\Python313\\python.exe -m unittest discover -s tests",
+      "output_preview": "...C:\\Users\\adiin\\OneDrive\\Desktop\\resonance\\resonance\\resonance\\resonance\\backend\\parser\\base.py:79: ResourceWarning: unclosed file <_io.BufferedRandom name='C:\\\\Users\\\\adiin\\\\AppData\\\\Local\\\\Temp\\\\tmp2gk2k8x_'>\n  continue\nResourceWarning: Enable tracemalloc to get the object allocation traceback\n......................Corrupted scan result JSON encountered for scan_id=corrupted-scan path=C:\\Users\\adiin\\AppData\\Local\\Temp\\tmpfcmqg1ng\\_corrupt\\corrupted-scan.json\n...\n----------------------------------------------------------------------\nRan 28 tests in 181.887s\n\nOK"
+    },
+    {
+      "name": "Pre-demo API flow",
+      "ok": true,
+      "required": true,
+      "duration_seconds": 24.62,
+      "command": "C:\\Python313\\python.exe scripts/pre_demo_check.py",
+      "output_preview": "[PASS] Health endpoint reachable\n[PASS] Brute-force scenario ranked as credential_stuffing\n[PASS] Impossible-travel scenario ranked correctly\n[PASS] Timeline series included in payload\n[PASS] Report and export endpoints working\n[PASS] Scan history list/delete endpoints working\n\n[PASS] Pre-demo validation completed successfully"
+    },
+    {
+      "name": "Noisy log generation",
+      "ok": true,
+      "required": true,
+      "duration_seconds": 0.356,
+      "command": "C:\\Python313\\python.exe scripts/generate_noisy_log.py",
+      "output_preview": "Wrote C:\\Users\\adiin\\OneDrive\\Desktop\\resonance\\resonance\\resonance\\resonance\\data\\demo_logs\\noisy_mixed.log (12000 lines)"
+    },
+    {
+      "name": "Threshold tuning",
+      "ok": true,
+      "required": true,
+      "duration_seconds": 57.532,
+      "command": "C:\\Python313\\python.exe scripts/tune_thresholds.py",
+      "output_preview": "[PASS] Threshold tuning complete\nBest candidate: baseline (score 100.0)\nBRUTE_FORCE_THRESHOLD=10\nBRUTE_FORCE_WINDOW=5\nSTUFFING_FAIL_THRESHOLD=5\nIF_CONTAMINATION=0.05\nIF_THRESHOLD=0.6\nMIN_SCORE_TO_INCLUDE=10.0\nKNOWN_BAD_IP_BONUS=8.0\n\nDetails written to: C:\\Users\\adiin\\OneDrive\\Desktop\\resonance\\resonance\\resonance\\resonance\\data\\tuning_recommendations.json"
+    },
+    {
+      "name": "Frontend production build",
+      "ok": true,
+      "required": true,
+      "duration_seconds": 4.465,
+      "command": "C:\\Program Files\\nodejs\\npm.CMD run build",
+      "output_preview": "> log-sentinel-frontend@0.1.0 build\n> vite build\n\n\u001b[36mvite v8.0.8 \u001b[32mbuilding client environment for production...\u001b[36m\u001b[39m\n\u001b[2K\ntransforming...\u00e2\u0153\u201c 2165 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                               0.65 kB \u00e2\u201d\u201a gzip:   0.34 kB\ndist/assets/index-bR20zWff.css               61.78 kB \u00e2\u201d\u201a gzip:  13.49 kB\ndist/assets/rolldown-runtime-COnpUsM8.js      0.81 kB \u00e2\u201d\u201a gzip:   0.46 kB\ndist/assets/react_vendor-8KT89lcZ.js        182.77 kB \u00e2\u201d\u201a gzip:  60.38 kB\ndist/assets/charts_vendor-B2n802dq.js       202.24 kB \u00e2\u201d\u201a gzip:  69.27 kB\ndist/assets/index-N9c4aM5A.js             1,951.98 kB \u00e2\u201d\u201a gzip: 598.58 kB\n\n\u001b[32m\u00e2\u0153\u201c built in 2.64s\u001b[39m\n\n\u001b[33m[plugin builtin:vite-reporter] \n(!) Some chunks are larger than 500 kB after minification. Consider:\n- Using dynamic import() to code-split the application\n- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting\n- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.\u001b[39m"
+    },
+    {
+      "name": "Docker quick smoke",
+      "ok": false,
+      "required": false,
+      "duration_seconds": 1.002,
+      "command": "C:\\Python313\\python.exe scripts/docker_smoke_test.py",
+      "output_preview": "[FAIL] docker daemon is not reachable. Start Docker Desktop and retry.\nfailed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified."
+    },
+    {
+      "name": "Briefing diagnostics",
+      "ok": true,
+      "required": true,
+      "duration_seconds": 0.293,
+      "command": "C:\\Python313\\python.exe scripts/llm_diagnostics.py",
+      "output_preview": "{\n  \"mode\": \"free-deterministic\",\n  \"briefing_source\": \"rule-based\",\n  \"ok\": true,\n  \"preview\": \"IP 185.220.101.47 recorded 47 failed authentication attempts followed by 1 successful login(s) in the same 5-minute window, a pattern strongly consistent with automated credential stuffing using stolen credentials. This IP is flagged as a known Tor exit node or cloud VPS range co\"\n}\n\n[PASS] Briefing diagnostics passed with no LLM dependencies."
+    }
+  ]
+}

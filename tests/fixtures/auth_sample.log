@@ -1,0 +1,4 @@
+Apr 13 02:31:11 server sshd[1234]: Failed password for root from 198.51.100.22 port 48122 ssh2
+Apr 13 02:34:52 server sshd[1234]: Accepted password for admin from 198.51.100.22 port 48122 ssh2
+Apr 13 02:35:01 server sshd[1234]: Invalid user test from 203.0.113.40 port 51211 ssh2
+Apr 13 02:35:16 server sshd[1234]: Connection closed by 203.0.113.40 port 51211 [preauth]

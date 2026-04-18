@@ -1,0 +1,1405 @@
+{
+  "scan_id": "3ef43a19-bff9-4945-bc55-e3d587bc1685",
+  "scan_timestamp": "2026-04-16T10:49:49.204478+00:00",
+  "filename": "my_upload_test_2026_04_16.log",
+  "detected_format": "auth",
+  "total_lines": 24,
+  "parse_errors": 0,
+  "total_events": 24,
+  "unique_ips": 8,
+  "anomalies": [
+    {
+      "rank": 1,
+      "composite_score": 100.0,
+      "severity_label": "CRITICAL",
+      "source_ip": "185.220.101.47",
+      "country_code": "NL",
+      "window_start": "2026-04-16T10:00:00+00:00",
+      "window_end": "2026-04-16T10:05:00+00:00",
+      "rule_triggered": "credential_stuffing",
+      "all_rules_fired": [
+        "brute_force",
+        "credential_stuffing"
+      ],
+      "iso_score": 1.0,
+      "spike_score": 0.0,
+      "rule_score": 0.95,
+      "is_known_bad_ip": true,
+      "login_failure_count": 12,
+      "login_success_count": 1,
+      "requests_per_minute": 2.6,
+      "unique_endpoints": 0,
+      "user": "root",
+      "briefing": "IP 185.220.101.47 recorded 12 failed authentication attempts followed by 1 successful login(s) in the same 5-minute window, a pattern strongly consistent with automated credential stuffing using stolen credentials. This IP is flagged as a known Tor exit node or cloud VPS range commonly used for automated attacks. Recommended action: immediately reset credentials for root, force-terminate active sessions, and block IP 185.220.101.47.",
+      "briefing_source": "rule-based",
+      "metadata": {}
+    },
+    {
+      "rank": 2,
+      "composite_score": 98.0,
+      "severity_label": "CRITICAL",
+      "source_ip": "103.21.58.1",
+      "country_code": "IN",
+      "window_start": "2026-04-16T12:00:00+00:00",
+      "window_end": "2026-04-16T12:05:00+00:00",
+      "rule_triggered": "impossible_travel",
+      "all_rules_fired": [
+        "impossible_travel"
+      ],
+      "iso_score": 0.1613,
+      "spike_score": 0.0,
+      "rule_score": 0.98,
+      "is_known_bad_ip": false,
+      "login_failure_count": 0,
+      "login_success_count": 1,
+      "requests_per_minute": 0.2,
+      "unique_endpoints": 0,
+      "user": "ajay.kumar",
+      "briefing": "Account ajay.kumar authenticated from India at 12:00 and then from Germany at 12:18, just 19 minutes apart, which is consistent with impossible travel. The estimated travel distance is approximately 6752 km. This is a strong indicator of credential compromise, session hijacking, or VPN/proxy-assisted access. Recommended action: force-terminate all active sessions for ajay.kumar, reset the password immediately, and notify the account owner.",
+      "briefing_source": "rule-based",
+      "metadata": {
+        "impossible_travel": {
+          "country_1": "India",
+          "country_2": "Germany",
+          "country_code_1": "IN",
+          "country_code_2": "DE",
+          "time_1": "2026-04-16T12:00:12+00:00",
+          "time_2": "2026-04-16T12:18:44+00:00",
+          "gap_minutes": 18.533333333333335,
+          "distance_km": 6752.4
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "composite_score": 98.0,
+      "severity_label": "CRITICAL",
+      "source_ip": "85.214.132.1",
+      "country_code": "DE",
+      "window_start": "2026-04-16T12:15:00+00:00",
+      "window_end": "2026-04-16T12:20:00+00:00",
+      "rule_triggered": "impossible_travel",
+      "all_rules_fired": [
+        "impossible_travel"
+      ],
+      "iso_score": 0.1935,
+      "spike_score": 0.0,
+      "rule_score": 0.98,
+      "is_known_bad_ip": false,
+      "login_failure_count": 0,
+      "login_success_count": 1,
+      "requests_per_minute": 0.4,
+      "unique_endpoints": 0,
+      "user": "ajay.kumar",
+      "briefing": "Account ajay.kumar authenticated from India at 12:00 and then from Germany at 12:18, just 19 minutes apart, which is consistent with impossible travel. The estimated travel distance is approximately 6752 km. This is a strong indicator of credential compromise, session hijacking, or VPN/proxy-assisted access. Recommended action: force-terminate all active sessions for ajay.kumar, reset the password immediately, and notify the account owner.",
+      "briefing_source": "rule-based",
+      "metadata": {
+        "impossible_travel": {
+          "country_1": "India",
+          "country_2": "Germany",
+          "country_code_1": "IN",
+          "country_code_2": "DE",
+          "time_1": "2026-04-16T12:00:12+00:00",
+          "time_2": "2026-04-16T12:18:44+00:00",
+          "gap_minutes": 18.533333333333335,
+          "distance_km": 6752.4
+        }
+      }
+    }
+  ],
+  "briefing_sources": {
+    "rule-based": 3,
+    "fallback": 0
+  },
+  "processing_time_seconds": 0.156,
+  "time_range": {
+    "start": "2026-04-16T09:10:01+00:00",
+    "end": "2026-04-16T12:27:40+00:00"
+  },
+  "event_type_counts": {
+    "login_success": 8,
+    "connection_closed": 2,
+    "login_failed": 14
+  },
+  "events_preview": [
+    {
+      "timestamp": "2026-04-16T09:10:01+00:00",
+      "source_ip": "49.36.81.12",
+      "event_type": "login_success",
+      "user": "ops",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 16 09:10:01 server sshd[2231]: Accepted password for ops from 49.36.81.12 port 40211 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-16T09:11:18+00:00",
+      "source_ip": "49.36.81.12",
+      "event_type": "connection_closed",
+      "user": null,
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 16 09:11:18 server sshd[2232]: Connection closed by 49.36.81.12 port 40211 [preauth]",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-16T09:14:03+00:00",
+      "source_ip": "52.172.14.90",
+      "event_type": "login_success",
+      "user": "monitor",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 16 09:14:03 server sshd[2233]: Accepted password for monitor from 52.172.14.90 port 40302 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-16T09:16:27+00:00",
+      "source_ip": "18.139.22.71",
+      "event_type": "login_failed",
+      "user": "deploy",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 16 09:16:27 server sshd[2234]: Failed password for deploy from 18.139.22.71 port 40443 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-16T09:17:10+00:00",
+      "source_ip": "18.139.22.71",
+      "event_type": "login_success",
+      "user": "deploy",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 16 09:17:10 server sshd[2235]: Accepted password for deploy from 18.139.22.71 port 40443 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-16T10:02:03+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 16 10:02:03 server sshd[2301]: Failed password for root from 185.220.101.47 port 48122 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-16T10:02:08+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 16 10:02:08 server sshd[2302]: Failed password for root from 185.220.101.47 port 48123 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-16T10:02:14+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 16 10:02:14 server sshd[2303]: Failed password for root from 185.220.101.47 port 48124 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-16T10:02:21+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 16 10:02:21 server sshd[2304]: Failed password for root from 185.220.101.47 port 48125 ssh2",
+      "parse_error": false
+    },
+    {
+      "timestamp": "2026-04-16T10:02:26+00:00",
+      "source_ip": "185.220.101.47",
+      "event_type": "login_failed",
+      "user": "root",
+      "status_code": null,
+      "endpoint": null,
+      "bytes_sent": null,
+      "raw_line": "Apr 16 10:02:26 server sshd[2305]: Failed password for root from 185.220.101.47 port 48126 ssh2",
+      "parse_error": false
+    }
+  ],
+  "feature_row_count": 6,
+  "detection_breakdown": {
+    "rule_count": 3,
+    "ml_count": 0,
+    "spike_count": 0
+  },
+  "feature_preview": [
+    {
+      "source_ip": "49.36.81.12",
+      "window_start": "2026-04-16T09:10:00+00:00",
+      "total_events": 2,
+      "login_failure_count": 0,
+      "login_success_count": 1,
+      "failure_success_ratio": 0.0,
+      "requests_per_minute": 0.4,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 9,
+      "is_night_hour": false,
+      "country_code": "IN",
+      "is_known_bad_ip": false,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": false,
+      "all_rules_fired": [],
+      "rule_triggered": null,
+      "rule_score": 0.0,
+      "rule_flagged": false,
+      "iso_score_raw": 0.16666666666666669,
+      "iso_score": 0.0,
+      "iso_flagged": false,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    },
+    {
+      "source_ip": "18.139.22.71",
+      "window_start": "2026-04-16T09:15:00+00:00",
+      "total_events": 2,
+      "login_failure_count": 1,
+      "login_success_count": 1,
+      "failure_success_ratio": 1.0,
+      "requests_per_minute": 0.4,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 9,
+      "is_night_hour": false,
+      "country_code": "SG",
+      "is_known_bad_ip": false,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": false,
+      "all_rules_fired": [],
+      "rule_triggered": null,
+      "rule_score": 0.0,
+      "rule_flagged": false,
+      "iso_score_raw": 0.33333333333333337,
+      "iso_score": 0.03225806451612904,
+      "iso_flagged": false,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    },
+    {
+      "source_ip": "185.220.101.47",
+      "window_start": "2026-04-16T10:00:00+00:00",
+      "total_events": 13,
+      "login_failure_count": 12,
+      "login_success_count": 1,
+      "failure_success_ratio": 12.0,
+      "requests_per_minute": 2.6,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 10,
+      "is_night_hour": false,
+      "country_code": "NL",
+      "is_known_bad_ip": true,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": false,
+      "all_rules_fired": [
+        "brute_force",
+        "credential_stuffing"
+      ],
+      "rule_triggered": "credential_stuffing",
+      "rule_score": 0.95,
+      "rule_flagged": true,
+      "iso_score_raw": 5.333333333333333,
+      "iso_score": 1.0,
+      "iso_flagged": true,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    },
+    {
+      "source_ip": "103.21.58.1",
+      "window_start": "2026-04-16T12:00:00+00:00",
+      "total_events": 1,
+      "login_failure_count": 0,
+      "login_success_count": 1,
+      "failure_success_ratio": 0.0,
+      "requests_per_minute": 0.2,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 12,
+      "is_night_hour": false,
+      "country_code": "IN",
+      "is_known_bad_ip": false,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": true,
+      "all_rules_fired": [
+        "impossible_travel"
+      ],
+      "rule_triggered": "impossible_travel",
+      "rule_score": 0.98,
+      "rule_flagged": true,
+      "iso_score_raw": 1.0,
+      "iso_score": 0.16129032258064516,
+      "iso_flagged": false,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    },
+    {
+      "source_ip": "85.214.132.1",
+      "window_start": "2026-04-16T12:15:00+00:00",
+      "total_events": 2,
+      "login_failure_count": 0,
+      "login_success_count": 1,
+      "failure_success_ratio": 0.0,
+      "requests_per_minute": 0.4,
+      "unique_endpoints": 0,
+      "unique_users": 1,
+      "hour_of_day": 12,
+      "is_night_hour": false,
+      "country_code": "DE",
+      "is_known_bad_ip": false,
+      "status_4xx_count": 0,
+      "status_5xx_count": 0,
+      "bytes_per_request": 0.0,
+      "impossible_travel": true,
+      "all_rules_fired": [
+        "impossible_travel"
+      ],
+      "rule_triggered": "impossible_travel",
+      "rule_score": 0.98,
+      "rule_flagged": true,
+      "iso_score_raw": 1.1666666666666667,
+      "iso_score": 0.19354838709677422,
+      "iso_flagged": false,
+      "spike_flagged": false,
+      "spike_score": 0.0,
+      "spike_excess_ratio": 0.0,
+      "spike_peak_rate": 0.0,
+      "spike_baseline_mean": 0.0
+    }
+  ],
+  "timeline": {
+    "series": [
+      {
+        "timestamp": "2026-04-16T09:10:00+00:00",
+        "event_count": 1,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:11:00+00:00",
+        "event_count": 1,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:12:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:13:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:14:00+00:00",
+        "event_count": 1,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:15:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:16:00+00:00",
+        "event_count": 1,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:17:00+00:00",
+        "event_count": 1,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:18:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:19:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:20:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:21:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:22:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:23:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:24:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:25:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:26:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:27:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:28:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:29:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:30:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:31:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:32:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:33:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:34:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:35:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:36:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:37:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:38:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:39:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:40:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:41:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:42:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:43:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:44:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:45:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:46:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:47:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:48:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:49:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:50:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:51:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:52:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:53:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:54:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:55:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:56:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:57:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:58:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T09:59:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:00:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T10:01:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T10:02:00+00:00",
+        "event_count": 9,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T10:03:00+00:00",
+        "event_count": 3,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T10:04:00+00:00",
+        "event_count": 1,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T10:05:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:06:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:07:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:08:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:09:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:10:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:11:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:12:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:13:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:14:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:15:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:16:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:17:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:18:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:19:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:20:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:21:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:22:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:23:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:24:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:25:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:26:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:27:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:28:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:29:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:30:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:31:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:32:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:33:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:34:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:35:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:36:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:37:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:38:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:39:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:40:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:41:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:42:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:43:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:44:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:45:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:46:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:47:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:48:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:49:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:50:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:51:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:52:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:53:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:54:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:55:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:56:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:57:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:58:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T10:59:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:00:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:01:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:02:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:03:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:04:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:05:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:06:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:07:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:08:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:09:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:10:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:11:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:12:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:13:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:14:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:15:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:16:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:17:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:18:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:19:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:20:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:21:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:22:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:23:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:24:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:25:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:26:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:27:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:28:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:29:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:30:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:31:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:32:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:33:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:34:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:35:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:36:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:37:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:38:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:39:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:40:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:41:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:42:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:43:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:44:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:45:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:46:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:47:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:48:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:49:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:50:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:51:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:52:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:53:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:54:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:55:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:56:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:57:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:58:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T11:59:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:00:00+00:00",
+        "event_count": 1,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T12:01:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T12:02:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T12:03:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T12:04:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T12:05:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:06:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:07:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:08:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:09:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:10:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:11:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:12:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:13:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:14:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:15:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T12:16:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T12:17:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T12:18:00+00:00",
+        "event_count": 1,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T12:19:00+00:00",
+        "event_count": 1,
+        "is_anomaly_window": true
+      },
+      {
+        "timestamp": "2026-04-16T12:20:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:21:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:22:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:23:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:24:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:25:00+00:00",
+        "event_count": 1,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:26:00+00:00",
+        "event_count": 0,
+        "is_anomaly_window": false
+      },
+      {
+        "timestamp": "2026-04-16T12:27:00+00:00",
+        "event_count": 2,
+        "is_anomaly_window": false
+      }
+    ],
+    "anomaly_windows": [
+      "2026-04-16T10:00:00+00:00",
+      "2026-04-16T12:00:00+00:00",
+      "2026-04-16T12:15:00+00:00"
+    ]
+  }
+}
